@@ -17,7 +17,7 @@ public class InsertSort {
 	public static void main(String[] args) {
 
 		int[] data = {
-				2,1
+				100,11,20,3,4,5,6,7,8,9
 		};
 		
 		InsertSort i = new InsertSort();
@@ -39,7 +39,7 @@ public class InsertSort {
 		int index = 0;
 		for (int i=1; i<length; i++) {
 			
-			index++;
+//			index++;
 			if (data[i] < data[i-1]) {
 				int temp = data[i];
 				

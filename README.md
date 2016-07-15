@@ -20,3 +20,4 @@
 [冒泡排序](/src/com/demo/BubbleSort.java)
 [简单选择排序](/src/com/demo/SimpleSelectoinSort.java)
 [直接插入排序](/src/com/demo/InsertSort.java)
+[希尔排序](/src/com/demo/ShellSort.java)
