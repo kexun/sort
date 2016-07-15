@@ -25,7 +25,12 @@ public class ShellSort {
 	public static void main(String[] args) {
 		
 		int[] data = {
-				100,11,20,3,4,5,6,7,8,9
+				100,11,20,3,4,5,6,7,8,9,
+				101,11,20,3,4,5,6,7,8,9,
+				102,12,20,3,4,5,6,7,8,9,
+				103,13,20,3,4,5,6,7,8,9,
+				104,14,20,3,4,5,6,7,8,9,
+				105,15,20,3,4,5,6,7,8,9
 		};
 		
 		ShellSort s = new ShellSort();
@@ -49,12 +54,11 @@ public class ShellSort {
 			increment = increment/3+1;
 			for (int i=increment; i<length; i++) {
 				
-//				index++;
+				index++;
 				if (data[i] < data[i-increment]) {
 					int temp = data[i];
 					int j;
 					for (j=i-increment; j>=0 && data[j]>temp; j-=increment) {
-//						swap(data, j, j+increment);
 						data[j+increment] = data[j];
 						index++;
 					}
@@ -68,12 +72,6 @@ public class ShellSort {
 
 	}
 
-	private void swap(int[] data, int j, int i) {
-
-		int temp = data[j];
-		data[j] = data[i];
-		data[i] = temp;
-	}
 }
 
 
