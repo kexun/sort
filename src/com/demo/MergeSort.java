@@ -9,7 +9,7 @@ public class MergeSort {
 
 	public static void main(String[] args) {
 		int[] data = {
-				5,2
+				5,2,45,32,76,357,46,3,4,57,56,6578,56,33,5,52,7,89,64,3,524,11,3
 			};
 		
 		int[] dest = new int[data.length];
