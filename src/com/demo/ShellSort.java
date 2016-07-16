@@ -24,21 +24,17 @@ public class ShellSort {
 
 	public static void main(String[] args) {
 		
-		int[] data = {
-				100,11,20,3,4,5,6,7,8,9,
-				101,11,20,3,4,5,6,7,8,9,
-				102,12,20,3,4,5,6,7,8,9,
-				103,13,20,3,4,5,6,7,8,9,
-				104,14,20,3,4,5,6,7,8,9,
-				105,15,20,3,4,5,6,7,8,9
-		};
+		int[] data = new int[1000000];
+		for (int i = 0; i < 1000000; i++) {
+			int num =(int) (Math.random() * 1000000);
+			data[i] = num;
+		}
 		
+		long startTime = System.currentTimeMillis();
 		ShellSort s = new ShellSort();
 		s.sort(data);
-		
-		for (int d : data) {
-			System.out.println(d);
-		}
+		long endTime = System.currentTimeMillis();
+		System.out.println(endTime - startTime);
 	}
 
 	public void sort(int[] data) {

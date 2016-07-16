@@ -9,16 +9,19 @@ public class HeapSort {
 
 	public static void main(String[] args) {
 		
-		int[] data = {
-			50,10,90,30,70,40,80,60,20
-		};
-		
+		int[] data = new int[1000000];
+		for (int i = 0; i < 1000000; i++) {
+			int num =(int) (Math.random() * 1000000);
+			data[i] = num;
+		}
+		long startTime = System.currentTimeMillis();
 		HeapSort h = new HeapSort();
 		h.sort(data);
-		
-		for (int d : data) {
-			System.out.println(d);
-		}
+		long endTime = System.currentTimeMillis();
+		System.out.println(endTime - startTime);
+//		for (int d : data) {
+//			System.out.println(d);
+//		}
 	}
 	
 	public void sort(int[] data) {

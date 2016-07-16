@@ -11,17 +11,22 @@ package com.demo;
 public class BubbleSort {
 	
 	public static void main(String[] args) {
-		int[] data = {
-				2,1,3,4,5,6,7,8,9,10
-		};
 		
+		int[] data = new int[100000];
+		for (int i = 0; i < 100000; i++) {
+			int num =(int) (Math.random() * 1000000);
+			data[i] = num;
+		}
+		
+		long startTime = System.currentTimeMillis();
 		BubbleSort b = new BubbleSort();
 //		b.sort(data);
 		b.optimizedSort(data);
-		
-		for (int i : data) {
-			System.out.println(i);
-		}
+		long endTime = System.currentTimeMillis();
+		System.out.println(endTime - startTime);
+//		for (int i : data) {
+//			System.out.println(i);
+//		}
 	}
 	
 	// 这种是常规的冒泡排序方式，从我的测试数据中可以看出，[2,1,3,4,5,6,7,8,9,10]只需要交换2和1

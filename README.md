@@ -23,3 +23,4 @@
 [希尔排序](/src/com/demo/ShellSort.java)  
 [堆排序](/src/com/demo/HeapSort.java)  
 [归并排序](/src/com/demo/MergeSort.java)  
+[快速排序](/src/com/demo/QuickSort.java)  
