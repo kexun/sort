@@ -11,9 +11,9 @@ public class QuickSort {
 
 	public static void main(String[] args) {
 		
-		int[] data = new int[1000000];
-		for (int i = 0; i < 1000000; i++) {
-			int num =(int) (Math.random() * 1000000);
+		int[] data = new int[10000000];
+		for (int i = 0; i < 10000000; i++) {
+			int num =(int) (Math.random() * 100000000);
 			data[i] = num;
 		}
 		

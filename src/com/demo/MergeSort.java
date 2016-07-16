@@ -8,17 +8,20 @@ package com.demo;
 public class MergeSort {
 
 	public static void main(String[] args) {
-		int[] data = {
-				5,2,45,32,76,357,46,3,4,57,56,6578,56,33,5,52,7,89,64,3,524,11,3
-			};
 		
+		int[] data = new int[1000000];
+		for (int i = 0; i < 1000000; i++) {
+			int num =(int) (Math.random() * 1000000);
+			data[i] = num;
+		}
+		long startTime = System.currentTimeMillis();
 		int[] dest = new int[data.length];
 		
 		MergeSort m = new MergeSort();
 		m.sort(data, dest);
-		for (int d : dest) {
-			System.out.println(d);
-		}
+		
+		long endTime = System.currentTimeMillis();
+		System.out.println(endTime - startTime);
 
 	}
 
