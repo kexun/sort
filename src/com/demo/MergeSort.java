@@ -35,7 +35,7 @@ public class MergeSort {
 		mergeSort2(data, dest, length);
 	}
 
-	// 递归调用
+	// 第一种方法：递归调用
 	private void mergeSort(int[] data, int[] dest, int s, int e) {
 		
 		if (s == e) {
@@ -51,28 +51,6 @@ public class MergeSort {
 		
 	}
 
-	private void merge(int[] data, int[] dest, int s, int m, int e) {
-
-		int j = m+1;
-		int k = s;
-		while (s <= m && j <= e) {
-			
-			if (data[s] > data[j]) {
-				dest[k++] = data[j++];
-			} else {
-				dest[k++] = data[s++];
-			}
-		}
-		
-		while (s <= m) {
-			dest[k++] = data[s++];
-		}
-		
-		while (j <= e) {
-			dest[k++] = data[j++];
-		}
-	}
-	
 	///////////////////////////////////////////////////////////////////////////
 	
 	// 第二种方式，非递归方式排序, 特别要注意这里的一些边界情况
@@ -99,6 +77,9 @@ public class MergeSort {
 		
 	}
 	
+	// 循环遍历数组，k是2^n，就是每个子序列的长度。两两合并所有字序列，如果
+	// 最后还剩下一组序列就把这一组序列填充到目标数组上，如果最后剩下两组序列,
+	// 但是最后一组序列长度不足k，任然可以合并两个数组。
 	private void mergePass(int[] data, int[] dest, int k, int length) {
 		
 		int i = 0;
@@ -116,6 +97,30 @@ public class MergeSort {
 		}
 		
 	}
+	
+	// 合并两个排序的数组，这个是公共方法，两种归并方式都会用到
+	private void merge(int[] data, int[] dest, int s, int m, int e) {
+
+		int j = m+1;
+		int k = s;
+		while (s <= m && j <= e) {
+			
+			if (data[s] > data[j]) {
+				dest[k++] = data[j++];
+			} else {
+				dest[k++] = data[s++];
+			}
+		}
+		
+		while (s <= m) {
+			dest[k++] = data[s++];
+		}
+		
+		while (j <= e) {
+			dest[k++] = data[j++];
+		}
+	}
+	
 }
 
 
