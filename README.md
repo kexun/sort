@@ -1,6 +1,7 @@
 # sort
 #####前言：
-本项目是对一些经典排序算法的java实现，参考书籍《大话数据结构》
+不同排序算法的实现，以及各公司的在线编程题。
+
 
 ######排序分为两大类：
 内排序和外排序。  
@@ -24,3 +25,4 @@
 [堆排序](/src/com/demo/HeapSort.java)  
 [归并排序](/src/com/demo/MergeSort.java)  
 [快速排序](/src/com/demo/QuickSort.java)  
+[小易的升级之路](/src/com/demo/wangYi1.java)  
