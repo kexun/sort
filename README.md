@@ -29,3 +29,4 @@
 [网易奖学金问题](/src/com/demo/JiangXueJin.java)  
 [网易路灯问题](/src/com/demo/Light.java)  
 [最长递增子序列A](/src/com/demo/LISA.java)  
+[最长递增子序列A](/src/com/demo/Mushroom.java)  
