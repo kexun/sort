@@ -30,3 +30,4 @@
 [网易路灯问题](/src/com/demo/Light.java)  
 [最长递增子序列A](/src/com/demo/LISA.java)  
 [网易面试题 扫描透镜](/src/com/demo/Mushroom.java)  
+[minimum depth of tree](/src/com/demo/MinTree.java)  
