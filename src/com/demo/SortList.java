@@ -21,11 +21,12 @@ public class SortList {
 		c.next = d;
 
 		SortList s = new SortList();
-		ListNode ne = s.sortList(head);
-		while (ne != null) {
-			System.out.println(ne.val);
-			ne = ne.next;
-		}
+//		ListNode ne = s.sortList(head);
+//		while (ne != null) {
+//			System.out.println(ne.val);
+//			ne = ne.next;
+//		}
+		s.sortList2(head);
 	}
 	
 	public ListNode sortList(ListNode head) {
@@ -76,4 +77,84 @@ public class SortList {
 	  }
 	}
 
+	/**
+	 * 归并排序
+	 * @param head
+	 * @return
+	 */
+	public ListNode sortList2(ListNode head) {
+		
+		if (head == null) {
+			return null;
+		}
+		
+		if (head.next == null) {
+			return head;
+		}
+		
+		ListNode n = mergeSort(head, null);
+		while (n != null) {
+			System.out.println(n.val);
+			n = n.next;
+		}
+		
+		return null;
+	}
+	
+	public ListNode mergeSort(ListNode s, ListNode e) {
+		
+		if (s.next == e || s.next.next == null) {
+			ListNode h = new ListNode(0);
+			h.next = new ListNode(s.next.val);
+			return h;
+		}
+		
+		ListNode oneStep = s;
+		ListNode twoStep = s;
+		
+		while (twoStep != e && twoStep.next != null) {
+			
+			oneStep = oneStep.next;
+			twoStep = twoStep.next;
+			if (twoStep.next != null) {
+				twoStep = twoStep.next;
+			}
+		}
+		
+		ListNode l = mergeSort(s, oneStep);
+		ListNode r = mergeSort(oneStep, e);
+		return merge(l, r);
+	}
+
+	public ListNode merge(ListNode l, ListNode r) {
+
+		ListNode head = new ListNode(0);
+		ListNode mList = head;
+		while (l.next != null && r.next != null) {
+
+			if (r.next.val < l.next.val) {
+				mList.next = new ListNode(r.next.val);
+				r = r.next;
+			} else {
+				mList.next = new ListNode(l.next.val);
+				l = l.next;
+			}
+			mList = mList.next;
+		}
+
+		while (l.next != null) {
+			mList.next = new ListNode(l.next.val);
+			l = l.next;
+			mList = mList.next;
+		}
+
+		while (r.next != null) {
+			mList.next = new ListNode(r.next.val);
+			r = r.next;
+			mList = mList.next;
+		}
+
+		return head;
+	}
+	
 }
