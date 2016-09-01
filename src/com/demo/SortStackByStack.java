@@ -2,6 +2,11 @@ package com.demo;
 
 import java.util.Stack;
 
+/**
+ * 对栈进行排序，但是只能利用一个辅助栈，已经一个辅助变量。
+ * @author kexun
+ *
+ */
 public class SortStackByStack {
 
 	public static void main(String[] args) {
