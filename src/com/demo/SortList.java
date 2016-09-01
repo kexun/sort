@@ -41,8 +41,8 @@ public class SortList {
 		}
 		
 		ListNode newHead = new ListNode(0);
-		newHead.next = new ListNode(head.next.val);
-		ListNode curr = head.next.next;
+		newHead.next = new ListNode(head.val);
+		ListNode curr = head.next;
 		while (curr != null) {
 			
 			ListNode newPre = newHead;
@@ -65,7 +65,7 @@ public class SortList {
 			
 		}
 		
-		return newHead;
+		return newHead.next;
     }
 	
 	class ListNode {
@@ -98,13 +98,13 @@ public class SortList {
 			n = n.next;
 		}
 		
-		return null;
+		return n.next;
 	}
 	
 	public ListNode mergeSort(ListNode s, ListNode e) {
 		
 		if (s.next == e || s.next.next == null) {
-			ListNode h = new ListNode(0);
+			ListNode h = new ListNode(s.val);
 			h.next = new ListNode(s.next.val);
 			return h;
 		}
