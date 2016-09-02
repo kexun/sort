@@ -39,3 +39,4 @@
 [通过一个辅助栈排序另一个栈](/src/com/demo/SortStackByStack.java)  
 [生成窗口最大数值数组](/src/com/demo/SortStackByStack.java)  
 [蛇数](/src/com/demo/SnakeNumber.java)  
+[数组转最大二叉树](/src/com/demo/Array2MaxTree.java)  
