@@ -42,3 +42,6 @@
 [数组转最大二叉树](/src/com/demo/Array2MaxTree.java)  
 [最大矩阵](/src/com/demo/MaxRec.java)  
 [最大值减最小值<=num的子数组数量](/src/com/demo/MaxMinArrNum.java)  
+[单链表中删除倒数第k个元素](/src/com/demo/RemoveLastKNode.java)  
+[删除单向链表中间节点](/src/com/demo/RemoveMidNode.java)  
+[反转单向或双向链表](/src/com/demo/ReverseList.java)  
