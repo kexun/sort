@@ -45,3 +45,4 @@
 [单链表中删除倒数第k个元素](/src/com/demo/RemoveLastKNode.java)  
 [删除单向链表中间节点](/src/com/demo/RemoveMidNode.java)  
 [反转单向或双向链表](/src/com/demo/ReverseList.java)  
+[约瑟夫问题](/src/com/demo/JosephusKill.java)  
