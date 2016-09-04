@@ -47,3 +47,4 @@
 [反转单向或双向链表](/src/com/demo/ReverseList.java)  
 [约瑟夫问题](/src/com/demo/JosephusKill.java)  
 [调整链表的节点](/src/com/demo/AdjustList.java)  
+[复制含有随机指针节点的链表](/src/com/demo/CopyRandList.java)  
