@@ -48,3 +48,4 @@
 [约瑟夫问题](/src/com/demo/JosephusKill.java)  
 [调整链表的节点](/src/com/demo/AdjustList.java)  
 [复制含有随机指针节点的链表](/src/com/demo/CopyRandList.java)  
+[两个单链表生成相加链表](/src/com/demo/AddList.java)  
