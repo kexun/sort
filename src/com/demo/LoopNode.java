@@ -30,7 +30,7 @@ public class LoopNode {
 		n5.next = n6;
 		n6.next = n7;
 		n7.next = n8;
-//		n8.next = n4;
+		n8.next = n4;
 		
 		Node f = new LoopNode().new Node(90);
 		Node f2 = new LoopNode().new Node(91);
@@ -45,7 +45,7 @@ public class LoopNode {
 		f4.next = f5;
 		f5.next = f6;
 		f6.next = f7;
-		f7.next = n4;
+		f7.next = n6;
 		
 		
 		LoopNode l = new LoopNode();
@@ -71,6 +71,9 @@ public class LoopNode {
 			return findCommNodeInList(n1, loop1, n2, loop2);
 		} else if (loop1 != null && loop2 != null) {
 			if (loop1 != loop2) {
+				if (isIntersect(loop1, loop2)) {
+					return loop1;
+				}
 				return null;
 			} else {
 				return findCommNodeInList(n1, loop1, n2, loop2);
@@ -78,6 +81,28 @@ public class LoopNode {
 		}
 		
 		return null;
+	}
+	
+	/**
+	 * 有两个环，但是各自的入口不同，需要判断这两个环是否是同一个环，如果在遍历过程中，两个节点
+	 * 相遇，则说明是同一个环，否则就不是同一个环。
+	 * @param loop1
+	 * @param loop2
+	 * @return
+	 */
+	public boolean isIntersect(Node loop1, Node loop2) {
+		
+		boolean intersect = false;
+		
+		while (loop1.next != loop1) {
+			loop1 = loop1.next;
+			if (loop1 == loop2) {
+				intersect = true;
+				break;
+			}
+		}
+		
+		return intersect;
 	}
 	
 	/**
