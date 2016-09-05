@@ -50,3 +50,4 @@
 [复制含有随机指针节点的链表](/src/com/demo/CopyRandList.java)  
 [两个单链表生成相加链表](/src/com/demo/AddList.java)  
 [查找两个单向链表的公共节点，链表有可能是循环的](/src/com/demo/LoopNode.java)  
+[将链表的每k个节点之间逆序](/src/com/demo/ReverseKNode.java)  
