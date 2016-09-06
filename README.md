@@ -53,3 +53,5 @@
 [将链表的每k个节点之间逆序](/src/com/demo/ReverseKNode.java)  
 [二叉树转双向链表](/src/com/demo/Tree2DLink.java)  
 [单链表的选择排序](/src/com/demo/SelectionSort.java)  
+[按照左右半区的方式重新组合链表](/src/com/demo/AdjustLeftRightLink.java)  
+[非递归的方式遍历二叉树](/src/com/demo/LoopTreeByStack.java)  
