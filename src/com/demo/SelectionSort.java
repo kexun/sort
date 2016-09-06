@@ -30,13 +30,15 @@ public class SelectionSort {
 		n6.next = n7;
 		n7.next = n8;
 		
-		SelectionSort s = new SelectionSort();
-		s.selectionSort(n1);
-		
-		while (n1 != null) {
-			System.out.println(n1.data);
-			n1 = n1.next;
-		}
+		n2 = null;
+		System.out.println(n1.next.data);
+//		SelectionSort s = new SelectionSort();
+//		s.selectionSort(n1);
+//		
+//		while (n1 != null) {
+//			System.out.println(n1.data);
+//			n1 = n1.next;
+//		}
 	}
 
 	public void selectionSort(Node head) {
