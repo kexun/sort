@@ -56,3 +56,4 @@
 [按照左右半区的方式重新组合链表](/src/com/demo/AdjustLeftRightLink.java)  
 [非递归的方式遍历二叉树](/src/com/demo/LoopTreeByStack.java)  
 [直观打印二叉树](/src/com/demo/VisualTree.java)  
+[二叉树的序列号 和 反序列化](/src/com/demo/TreeSeri.java)  
