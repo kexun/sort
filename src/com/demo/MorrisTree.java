@@ -32,8 +32,8 @@ public class MorrisTree {
 		h9.right = h10;
 	
 		MorrisTree v = new MorrisTree();
-		v.morrisInTree(head);
-		
+//		v.morrisInTree(head);
+		v.morrisPreTree(head);
 	
 	}
 
@@ -70,5 +70,34 @@ public class MorrisTree {
 		}
 		
 	}
+
+	/**
+	 * morris遍历  先序
+	 * @param head
+	 */
+	public void morrisPreTree(Tree head) {
+		if (head == null) {
+			return;
+		}
+		
+		Tree c1 = head;
+		Tree c2 = null;
+		
+		while (c1 != null) {
+			
+			System.out.println(c1.data);
+			c2 = c1.left;
+			if (c2 != null) {
+				while (c2.right != null) {
+					c2 = c2.right;
+				}
+				c2.right = c1.right;
+			}
+			
+			c1 = c1.left != null? c1.left : c1.right;
+		}
+		
+	}
+	
 	
 }
