@@ -59,3 +59,4 @@
 [二叉树的序列号 和 反序列化](/src/com/demo/TreeSeri.java)  
 [morris遍历树](/src/com/demo/MorrisTree.java)  
 [找到二叉树中的最大搜索二叉树](/src/com/demo/MaxSearchTree.java)  
+[找到二叉树中符合搜索二叉树条件的最大拓扑结构](/src/com/demo/MaxSearchTreeSize.java)  
