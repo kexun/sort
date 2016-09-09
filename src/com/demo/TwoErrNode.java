@@ -1,5 +1,6 @@
 package com.demo;
 
+import java.util.HashMap;
 import java.util.Stack;
 
 /**
@@ -11,11 +12,11 @@ public class TwoErrNode {
 
 	public static void main(String[] args) {
 
-		Tree head = new Tree(70);
-		Tree h1 = new Tree(40);
-		Tree h2 = new Tree(50);
+		Tree head = new Tree(40);
+		Tree h1 = new Tree(70);
+		Tree h2 = new Tree(100);
 		Tree h3 = new Tree(20);
-		Tree h4 = new Tree(100);
+		Tree h4 = new Tree(50);
 		Tree h5 = new Tree(45);
 		Tree h6 = new Tree(55);
 		Tree h7 = new Tree(53);
@@ -34,14 +35,24 @@ public class TwoErrNode {
 		h2.left = h9;
 		h2.right = h10;
 		
+		HashMap<Tree, Tree> errs = new HashMap<Tree, Tree>();
 		TwoErrNode t = new TwoErrNode();
-		Tree[] tree = t.getTwoErrNode2(head);
+		Tree[] tree = t.getTwoErrNode2(head, errs);
 		System.out.println("-------------");
 		for (Tree a : tree) {
 			if (a != null) {
 				System.out.println(a.data);
 			}
 		}
+		
+		Tree t01 = tree[0];
+		Tree t02 = tree[1];
+		Tree[] p = t.getErrParents(errs, t01, t02);
+		System.out.println("-------------");
+		System.out.println(p[0] == null? "head" : p[0].data);
+		System.out.println(p[1] == null? "head" : p[1].data);
+		Tree newTree = t.changeTwoNode(head, p, tree);
+		t.getTwoErrNode2(newTree, errs);
 	}
 
 	/**
@@ -84,7 +95,7 @@ public class TwoErrNode {
 	 * @param head
 	 * @return
 	 */
-	public Tree[] getTwoErrNode2(Tree head) {
+	public Tree[] getTwoErrNode2(Tree head, HashMap<Tree, Tree> errs) {
 		
 		Tree[] nodes = new Tree[2];
 		Stack<Tree> stack = new Stack<Tree>();
@@ -92,6 +103,12 @@ public class TwoErrNode {
 		while (!stack.isEmpty() || head != null) {
 			
 			if (head != null) {
+				if (head.left != null) {
+					errs.put(head.left, head);
+				}
+				if (head.right != null) {
+					errs.put(head.right, head);
+				}
 				stack.push(head);
 				head = head.left;
 			} else {
@@ -109,7 +126,49 @@ public class TwoErrNode {
 		return nodes;
 	}
 	
+	public Tree[] getErrParents(HashMap<Tree, Tree> errs, Tree n1, Tree n2) {
+		
+		Tree[] p = new Tree[2];
+		
+		p[0] = errs.get(n1);
+		p[1] = errs.get(n2);
+		
+		return p;
+	}
 	
-	
-	
+	/**
+	 * 二叉树交换两个节点，并不是简单的调整内容，而是改变两个节点的指向
+	 * @param head
+	 * @param p
+	 * @param er
+	 * @return
+	 */
+	public Tree changeTwoNode(Tree head, Tree[] p, Tree[] er) {
+		
+		Tree t01 = er[0];
+		Tree t02 = er[1];
+		Tree e1 = p[0];
+		Tree e2 = p[1];
+		System.out.println("-------------");
+		
+		Tree node1 = t01.left;
+		Tree node2 = t01.right;
+		Tree node3 = t02.left;
+		Tree node4 = t02.right;
+		
+		t01.left = node3 == t01? t02 : node3;
+		t01.right = node4 == t01? t02 : node4;
+		t02.left = node1 == t02? t01 : node1;
+		t02.right = node2 == t02? t01 : node2;
+
+		if (e1 == null) {
+			head = t02;
+		}
+		
+		if (e2 == null) {
+			head = t01;
+		}
+		
+		return head;
+	}
 }

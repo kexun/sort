@@ -61,3 +61,4 @@
 [找到二叉树中的最大搜索二叉树](/src/com/demo/MaxSearchTree.java)  
 [找到二叉树中符合搜索二叉树条件的最大拓扑结构](/src/com/demo/MaxSearchTreeSize.java)  
 [二叉树按层打印和zigzag打印](/src/com/demo/TreeLayerZigZagPrint.java)  
+[调整搜索二叉树中的两个错误节点](/src/com/demo/TwoErrNode.java)  
