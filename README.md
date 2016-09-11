@@ -65,3 +65,4 @@
 [树t1,t2 判断t1是否包含t2](/src/com/demo/ContainsTree.java)  
 [根据后续数组重建搜索二叉树](/src/com/demo/RebuildSearchTree.java)  
 [分别判断一颗二叉树是否为搜索二叉树和完全二叉树](/src/com/demo/ComplateSearchTree.java)  
+[通过有序数组生成平衡搜索二叉树](/src/com/demo/AvlSearchTree.java)  
