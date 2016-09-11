@@ -64,3 +64,4 @@
 [调整搜索二叉树中的两个错误节点](/src/com/demo/TwoErrNode.java)  
 [树t1,t2 判断t1是否包含t2](/src/com/demo/ContainsTree.java)  
 [根据后续数组重建搜索二叉树](/src/com/demo/RebuildSearchTree.java)  
+[分别判断一颗二叉树是否为搜索二叉树和完全二叉树](/src/com/demo/ComplateSearchTree.java)  
