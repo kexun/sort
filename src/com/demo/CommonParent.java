@@ -1,5 +1,6 @@
 package com.demo;
 
+
 /**
  * 查找两个节点的最近公共祖先
  * @author kexun
@@ -9,6 +10,7 @@ public class CommonParent {
 
 	public static void main(String[] args) {
 
+		
 		Tree head = new Tree(70);
 		Tree h1 = new Tree(40);
 		Tree h2 = new Tree(100);
