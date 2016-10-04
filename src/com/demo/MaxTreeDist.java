@@ -1,5 +1,7 @@
 package com.demo;
 
+import java.util.Scanner;
+
 /**
  * 二叉树节点间的最大距离
  * @author kexun
@@ -9,6 +11,17 @@ public class MaxTreeDist {
 
 	public static void main(String[] args) {
 
+		
+		Scanner in = new Scanner(System.in);
+		while (in.hasNext()) {
+			String st = in.nextLine();
+			String[] line = st.split(" ");
+			int a = Integer.valueOf(line[0]);
+			int b = Integer.valueOf(line[1]);
+			System.out.println(a+b);
+		}
+		
+		
 		Tree head = new Tree(1);
 		Tree h2 = new Tree(2);
 		Tree h3 = new Tree(3);

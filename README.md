@@ -68,3 +68,4 @@
 [通过有序数组生成平衡搜索二叉树](/src/com/demo/AvlSearchTree.java)  
 [在二叉树中找到一个节点的后继节点](/src/com/demo/NextTreeNode.java)  
 [查找两个节点的最近公共祖先](/src/com/demo/CommonParent.java)  
+[Trie树](/src/com/demo/TrieTree.java)  
